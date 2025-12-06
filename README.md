@@ -1,2 +1,2 @@
 # My-first-Project
-for ecommerce website
+connect for meetings

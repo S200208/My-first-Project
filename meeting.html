@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+     <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Google Meet</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="meeting-page">
+    <header class="topbar">
+        <button id="menu-btn" class="hamburger" aria-label="Open navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="topbar-left">
+            
+            <div class="meeting-info">
+                <div class="meeting-title"><a href="index.html"><br>Google Meet</a></div>
+            </div>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn">⋯</button>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+    <main class="stage">
+        <section class="video-area">
+            <div class="video-grid">
+                <div class="tile" data-name="Alice">
+                    <div class="video-placeholder">AL</div>
+                    <div class="tile-label">Alice</div>
+                </div>
+                <div class="tile" data-name="Bob">
+                    <div class="video-placeholder">BO</div>
+                    <div class="tile-label">Bob</div>
+                </div>
+                <div class="tile" data-name="You">
+                    <div class="video-placeholder">You</div>
+                    <div class="tile-label">You</div>
+                </div>
+                <div class="tile" data-name="Sam">
+                    <div class="video-placeholder">SA</div>
+                    <div class="tile-label">Sam</div>
+                </div>
+                <div class="tile" data-name="Priya">
+                    <div class="video-placeholder">PR</div>
+                    <div class="tile-label">Priya</div>
+                </div>
+                <div class="tile" data-name="Alex">
+                    <div class="video-placeholder">ALX</div>
+                    <div class="tile-label">Alex</div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <ul class="participants">
+                
+            </ul>
+            <div class="sidebar-header">People</div>
+            <ul class="participants">
+                <li><span class="avatar1">You</span><span class="p-name">You</span></li>
+                <li><span class="avatar2">AL</span><span class="p-name">Alice</span></li>
+                <li><span class="avatar3">BO</span><span class="p-name">Bob</span></li>
+                <li><span class="avatar4">SA</span><span class="p-name">Sam</span></li>
+                <li><span class="avatar5">PR</span><span class="p-name">Priya</span></li>
+                <li><span class="avatar6">AX</span><span class="p-name">Alex</span></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="controls">
+        <div class="controls-inner">
+            <button id="mic-btn" class="control circle" title="Mute/Unmute">
+                 <i class="fas fa-microphone"></i></button>
+            <button id="cam-btn" class="control circle" title="Camera on/off">
+                 <i class="fas fa-video"></i>
+
+            </button>
+            <button id="raise-btn" class="control circle" title="Raise hand">
+                 <i class="fas fa-hand-paper "></i>
+            </button>
+            <button id="hangup-btn" class="control circle hangup" title="Leave call">
+                 <i class="fas fa-phone-slash"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="meet.js"></script>
+</body>
+
+</html>

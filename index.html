@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Meet</title>
+  <link rel="icon" type="png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+
+      <button id="hamburger" class="hamburger" aria-label="Open navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      
+      <div class topbar-left>
+     <h2 class="heading">Google Meet</h2>
+     </div>
+       
+      <div class="Signin">Sign in</div>
+  </header>
+  <aside class="sidebar collapsed" id="sidebar" aria-hidden="true">
+        <div class="sidebar-header"></div>
+        <ul class="participants">
+          <li><button id="nav-meetings" class="nav-item">Meetings</button></li>
+          <li><button id="nav-calls" class="nav-item">Calls</button></li>
+        </ul>
+      </aside>
+  <div class="hero">
+    <h1>Video calls and Meetings for <br>
+      Everyone</h1>
+    <p>Connect, collaborate and celebrate from anywhere with <br>Google meet</p>
+
+    <div class="meet-container">
+        <button class="new-meet">➕ New Meeting</button>
+
+        <div class="join-box">
+          <input type="text" placeholder="Enter a code or link" id="join-input">
+          <button class="join-btn" id="join-btn">Join</button>
+        </div>
+    </div>
+  </div>
+    <div class="banner">
+        <img src="./banner1.jpeg" alt="">
+        <img src="./banner2.jpeg" alt="">
+        <img src="./benner3.jpeg" alt="">
+    </div>
+  <script src="meet.js"></script>
+   </body>
+  </html>

@@ -1,0 +1,826 @@
+/* Google Meet-like mock styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #8093b2;
+}
+
+/* Hamburger Button — three simple lines, no box */
+.hamburger {
+    width: 3p0x;
+    height: 28px;
+    padding: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.heading {
+    text-align: left;
+    margin-left: 25px;
+    color: gray;
+    text-align: left;
+    font-family: italic;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+
+.subheading {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-style: times new roman;
+    font-size: 25px;
+    color: gray;
+
+
+}
+
+.hamburger .bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #0b0b0b;
+    /* black lines */
+    border-radius: 2px;
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+/* Open state - animate into an X */
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Hover subtle darken */
+.hamburger:hover .bar {
+    background: #464545
+}
+
+/* Sliding Sidebar 🔧: overlay mode (full sliding) */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #d9cece;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 2px 0px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 300ms ease;
+    padding-top: 20px;
+    z-index: 120;
+}
+
+
+.sidebar a:hover {
+    background: #cce1f5;
+}
+
+/* Main Page Content */
+.main {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 12px
+}
+
+.brand-logo {
+    width: 36px;
+    height: 36px
+}
+
+.brand-title {
+    color: #5f6368;
+    font-weight: 600
+}
+
+
+
+
+
+.controls {
+    margin-top: 40px;
+}
+
+input {
+    padding: 12px;
+    width: 240px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.btn-blue {
+    background: #1a73e8;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-join {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Join group styles - combine input and join button into a single control */
+.join-group {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.join-group input {
+    padding: 12px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 260px
+}
+
+.join-group .btn-join {
+    padding: 12px 14px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid rgba(3, 15, 37, 0.08)
+}
+
+/* Sign-in */
+.signin {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Product Sans", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #202124;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: transparent;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center
+}
+
+/* Menu button (three stacked lines) */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-btn .line {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #5f6368;
+    margin: 2px 0;
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+.menu-btn.open .line1 {
+    transform: translateY(6px) rotate(45deg)
+}
+
+.menu-btn.open .line2 {
+    opacity: 0
+}
+
+.menu-btn.open .line3 {
+    transform: translateY(-6px) rotate(-45deg)
+}
+
+.meet-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    margin-right: 12px
+}
+
+.meeting-info {
+    display: flex;
+    flex-direction: column
+}
+
+.meeting-title {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.meeting-title a {
+    color: inherit;
+    text-decoration: none
+}
+
+/* Gray label for the small 'Google Meet' text in the topbar */
+.meeting-title {
+    color: #5f6368
+}
+
+.meeting-code {
+    font-size: 12px;
+    color: #5f6368
+}
+
+.topbar-right .icon-btn {
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer
+}
+
+.stage {
+    display: flex;
+    flex: 1;
+    overflow: hidden
+}
+
+.video-area {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    align-items: stretch
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    width: 100%;
+    height: 100%
+}
+
+.tile {
+    background: #fcfdff;
+    color: #cfc3c3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 160px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f5fbff, #bdbfc5);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.tile-label {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    font-size: 13px;
+    color: #e8eaed;
+    background: rgba(189, 177, 177, 0.225);
+    padding: 4px 8px;
+    border-radius: 18px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 64px;
+    bottom: 0;
+    width: 260px;
+    padding: 12px 12px;
+    background: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(3, 15, 37, 0.04);
+    transform: translateX(-100%);
+    transition: transform 260ms ease;
+    z-index: 60;
+}
+
+
+body.sidebar-open .sidebar {
+    transform: translateX(0);
+}
+
+
+body.sidebar-open .overlay {
+    display: block;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 100
+}
+
+.sidebar-header {
+    font-weight: 600;
+    margin-bottom: 8px
+}
+
+.participants {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.participants li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 8px
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e8eaed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #0942ed
+}
+
+.avatar1 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e94d4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #040404
+}
+
+.avatar2 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff265;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000000
+}
+
+.avatar3 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ff932d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #121212
+}
+
+.avatar4 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #b61515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000000
+}
+
+.avatar5 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #209300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000000
+}
+
+.avatar6 {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ad008e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000000
+}
+
+.p-name {
+    color: #f1f4ff
+}
+
+.controls {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none
+}
+
+.controls-inner {
+    background: transparent;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    pointer-events: auto;
+    padding: 8px 12px
+}
+
+.control {
+    border: none;
+    background: #fff;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(178, 180, 183, 0.673);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #a5a9b1
+}
+
+.control.circle {
+    font-size: 16px
+}
+
+.control.hangup {
+    background: #D93025;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(217, 48, 37, 0.25)
+}
+
+
+.control.off {
+    opacity: 0.55;
+    background: #e8f6ff;
+    color: #cacbd6
+}
+
+/* Make mic, camera and raise-hand buttons gray by default */
+#mic-btn,
+#cam-btn,
+#raise-btn {
+    background: #e0e0e0;
+    color: #202124;
+}
+
+/* Responsive adjustments */
+@media (max-width:900px) {
+    .sidebar {
+        display: none
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
+    }
+}
+
+/* small helpers */
+.icon-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer
+}
+
+/* keep content above controls */
+main {
+    padding-bottom: 86px
+}
+
+/* Meeting page dark theme */
+body.meeting-page {
+    background: #000;
+    color: #e8eaed;
+    min-height: 100vh;
+
+}
+
+body.meeting-page .topbar {
+    border-bottom-color: rgba(255, 255, 255, 0.06)
+}
+
+body.meeting-page .meet-logo {
+    background: linear-gradient(135deg, #d8d9da, #c6cec8);
+}
+
+body.meeting-page .tile {
+    background: #111
+}
+
+body.meeting-page .video-placeholder {
+    background: linear-gradient(135deg, #716e6e, #232323);
+    color: #fff
+}
+
+body.meeting-page .sidebar {
+    background: #585454;
+    color: #e8eaed;
+    border-right-color: rgba(255, 255, 255, 0.06)
+}
+
+body.meeting-page .controls .control {
+    background: rgba(247, 243, 243, 0.04);
+    color: #e8eaed;
+    box-shadow: none
+}
+
+body.meeting-page .control.hangup {
+    background: #e53935;
+    color: #fff
+}
+
+/* Ensure mic/cam/raise buttons appear gray in dark meeting theme */
+body.meeting-page #mic-btn,
+body.meeting-page #cam-btn,
+body.meeting-page #raise-btn {
+    background: #4a4a4a;
+    color: #e8eaed;
+    box-shadow: none;
+}
+
+/* Landing hero and buttons */
+.landing-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px
+}
+
+.hero {
+    max-width: 820px;
+    text-align: center
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+    color: #202124
+}
+
+.sub {
+    color: #5f6368;
+    margin-top: 12px;
+    margin-bottom: 24px
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.btn {
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(3, 15, 37, 0.06)
+}
+
+.btn-primary {
+    background: #1a73e8;
+    color: #fff
+}
+
+.btn-primary:hover {
+    background: #1558b0
+}
+
+.btn-join {
+    background: transparent;
+    border: 1px solid rgba(3, 15, 37, 0.08);
+    padding: 10px 14px
+}
+
+.join-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.join-input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(3, 15, 37, 0.08);
+    min-width: 220px
+}
+
+/* Raised-hand visual */
+.tile.raised {
+    box-shadow: 0 0 0 3px rgba(179, 175, 165, 0.14), 0 6px 18px rgba(3, 15, 37, 0.08)
+}
+
+.tile .hand-indicator {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: rgba(255, 193, 7, 0.95);
+    color: #000;
+    padding: 4px 6px;
+    border-radius: 12px;
+    font-size: 12px
+}
+
+/* Nav items styling */
+.nav-item {
+    padding: 12px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    color: #222;
+    transition: background 220ms ease, color 220ms ease, transform 160ms ease;
+}
+
+/* Colorful hover for Meetings and Calls */
+#nav-meetings {
+    background: rgb(156, 216, 238);
+    color: #3b94ba;
+}
+
+#nav-calls {
+    background: rgb(255, 249, 249);
+    color: #0c0c0c;
+}
+
+.nav-item:active {
+    transform: translateY(1px)
+}
+
+.meet-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+/* New Meeting Button */
+.new-meet {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Join Section */
+.join-box {
+    display: flex;
+    align-items: middle;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.join-box input {
+    border: none;
+    padding: 10px;
+    width: 220px;
+    outline: none;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.join-btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.banner img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 80%;
+    border: 3px solid #ffffff;
+    /* optional outline */
+}
+
+.hero {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 200px;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+}
+
+/* Buttons below text */
+.meet-container {
+    margin-top: 30px;
+    /* gap BETWEEN text and buttons */
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
